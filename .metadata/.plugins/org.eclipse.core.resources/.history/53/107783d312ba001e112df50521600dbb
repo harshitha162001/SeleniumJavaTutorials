@@ -1,0 +1,27 @@
+package ui;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class xpathexample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 WebDriverManager.chromedriver().setup();
+			ChromeDriver driver=new ChromeDriver();
+			driver.get("https://money.rediff.com/gainers");
+			driver.manage().window().maximize();
+			
+			//xpath axes
+			//self node
+			driver.findElement(By.xpath("//a[contains(.,'Ravindra Energy Ltd')]/self::a")).click();
+			
+			
+			//parent node
+			driver.findElement(By.xpath("//a[contains(.,'Ravindra Energy Ltd')]/parent::td")).click();
+
+	}
+
+}

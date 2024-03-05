@@ -1,0 +1,39 @@
+package ui;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver; 
+import org.openqa.selenium.remote.DesiredCapabilities;
+import io.github.bonigarcia.wdm.WebDriverManager;  
+  
+public class alertexample{  
+  
+    public static void main(String[] args) {   
+    	
+    	 WebDriverManager.chromedriver().setup();
+    		ChromeDriver driver=new ChromeDriver();
+    		driver.get("http://www.ebay.com");
+    		driver.manage().window().maximize();
+    		driver.navigate().to("https://www.testandquiz.com/selenium/testing.html");   
+    	
+            driver.findElement(By.linkText("Generate Alert Box")).click();  
+              
+         
+            Alert alert = (Alert) driver.switchTo().alert();  
+              
+            //Using accept() method to accept the alert box  
+            alert.accept();  
+          
+            driver.findElement(By.linkText("Generate Confirm Box")).click();  
+              
+              
+            Alert confirmBox = (Alert) driver.switchTo().alert();  
+              
+           
+            ((Alert) confirmBox).dismiss();  
+      
+      
+    }  
+  
+}  

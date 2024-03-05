@@ -1,0 +1,21 @@
+package objectrepository;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class MyAccountPage {
+  ChromeDriver driver;
+  
+  public MyAccountPage(ChromeDriver driver) {
+	  this.driver=driver;
+  }
+  
+  private By accountfield =By.xpath("//a[text()='Account']");
+  
+  public WebElement getAccountField() {
+	  return driver.findElement(accountfield);
+  }
+  
+}

@@ -1,0 +1,37 @@
+package objectrepository;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LoginPage {
+	ChromeDriver driver;
+	
+	
+	
+	public LoginPage(ChromeDriver driver) {
+		// TODO Auto-generated constructor stub
+		this.driver=driver;
+	}
+
+	
+
+	private By emailidfield=By.id("input-email");
+	private By passwordfield =By.id("input-password");
+	private By loginButton=By.cssSelector("input[type='submit']");
+	
+	public WebElement getemailidfield() {
+		return driver.findElement(emailidfield);
+	}
+	public WebElement getpasswordfield() {
+		return driver.findElement(passwordfield);
+	}
+	public WebElement getLoginButton() {
+		return driver.findElement(loginButton);
+	}
+	
+	
+	
+
+}

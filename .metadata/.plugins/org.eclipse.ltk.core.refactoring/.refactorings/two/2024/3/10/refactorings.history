@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;PalindromeSubstringCounter.java&apos; to &apos;javaprograms/src/javaprograms&apos;&#x0D;&#x0A;- Original project: &apos;two&apos;&#x0D;&#x0A;- Destination element: &apos;javaprograms/src/javaprograms&apos;&#x0D;&#x0A;- Original element: &apos;two.PalindromeSubstringCounter.java&apos;" description="Copy compilation unit" destination="=javaprograms/src&lt;javaprograms" element1="/src&lt;two{PalindromeSubstringCounter.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1709627330565" units="1" version="1.0"/>
+</session>

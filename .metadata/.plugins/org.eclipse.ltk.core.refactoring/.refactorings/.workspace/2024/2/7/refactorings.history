@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;FreeCRMTest&apos; to &apos;PageObjecProgram&apos;" description="Rename resource &apos;FreeCRMTest&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/FreeCRMTest" name="PageObjecProgram" stamp="1707980775640" updateReferences="true"/>
+</session>

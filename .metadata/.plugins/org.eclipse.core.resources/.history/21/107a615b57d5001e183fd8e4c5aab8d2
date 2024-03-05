@@ -1,0 +1,45 @@
+package test;
+
+import org.testng.annotations.Test;
+import static io.restassured.RestAssured.*;
+
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import resourse.Payload;
+import resourse.Utils;
+
+public class RecSpec {
+RequestSpecification res;
+RequestSpecification getres;
+RequestSpecification deleteres;
+String completed="false";
+String title="harshitha";
+@Test
+public void ReqSpec_add() {
+	res=given().log().all().spec(Utils.requestSpecification()).body(Payload.AddingPayload(completed,title));
+	Response response=res.post("/todos");
+	JsonPath js=new JsonPath(response.asString());
+	System.out.println(js.getString("title"));	
+			
+}
+@Test
+public void ReqSpec_get() {
+	getres=given().log().all().spec(Utils.getrequestSpecification(title));
+	Response response=getres.get("/todos");
+	JsonPath js=new JsonPath(response.asString());
+	System.out.println(js.getString("[0].completed"));	
+		
+}
+@Test
+public void ReqSpec_delete() {
+	deleteres=given().log().all().spec(Utils.requestSpecification()).body("{\"ID\":\"1\"}");
+			Response response=deleteres.delete("/todos");
+			
+	JsonPath js=new JsonPath(response.asString());
+	System.out.println(js.getString("[0].completed"));	
+}
+
+
+
+}

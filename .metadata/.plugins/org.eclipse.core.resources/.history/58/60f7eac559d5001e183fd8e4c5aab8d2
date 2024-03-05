@@ -1,0 +1,50 @@
+package stepDefinations;
+
+import static io.restassured.RestAssured.given;
+
+import org.junit.Assert;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import resourse.Utils;
+
+public class GetUser {
+	RequestSpecification getres;
+	Response response;
+	@Given("Get User Using  {string} from User")
+	public void get_user_using_from_user(String title) {
+		getres=given().log().all().spec(Utils.getrequestSpecification(title));
+	}
+	@When("User Performs Get http request")
+	public void user_performs_get_http_request() {
+		response=getres.get("/todos");
+		//System.out.println(response.asString());
+		
+	}
+	@Then("Verify Response is success with the status code")
+	public void verify_response_is_success_with_the_status_code() {
+		//  Assert.assertEquals(response.getStatusCode(),201);
+		
+	}
+	
+	@Then("Verify response is correct with correct completed")
+	public void verify_response_is_correct_with_correct_completed() {
+		JsonPath js=new JsonPath(response.asString());
+		System.out.println(js.getString("[0].completed"));
+		//System.out.println(js);
+		//Assert.assertEquals(js.getString("[0].completed"),"true");
+		
+		
+			
+	}
+
+
+
+
+
+
+}

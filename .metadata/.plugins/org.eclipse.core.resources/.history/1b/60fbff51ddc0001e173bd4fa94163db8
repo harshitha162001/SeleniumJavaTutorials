@@ -1,0 +1,18 @@
+package ui;
+
+import org.openqa.selenium.WebDriver;  
+import org.openqa.selenium.firefox.FirefoxDriver;  
+import org.openqa.selenium.remote.DesiredCapabilities;  
+  
+public class alertexample{  
+  
+    public static void main(String[] args) {  
+          
+   
+  
+      // Launch Website  
+driver.navigate().to("https://www.testandquiz.com/selenium/testing.html");   
+      
+    }  
+  
+}  

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;objectrepository.DigestAuth&apos; to &apos;DragAndDrop&apos;&#x0D;&#x0A;- Original project: &apos;PageObjecProgram&apos;&#x0D;&#x0A;- Original element: &apos;objectrepository.DigestAuth&apos;&#x0D;&#x0A;- Renamed element: &apos;objectrepository.DragAndDrop&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;DigestAuth&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;objectrepository{DigestAuth.java[DigestAuth" matchStrategy="1" name="DragAndDrop" qualified="false" references="true" similarDeclarations="false" stamp="1708420769293" textual="false" version="1.0"/>
+</session>
