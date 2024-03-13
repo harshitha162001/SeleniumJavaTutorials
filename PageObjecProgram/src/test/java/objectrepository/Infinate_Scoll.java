@@ -25,7 +25,7 @@ public class Infinate_Scoll {
     
     public void PerformAction() {
     	JavascriptExecutor js=(JavascriptExecutor)driver;
-    	js.executeScript("window.scrollBy(0,-50000)","");
+    	js.executeScript("window.scrollBy(0,50000)");
     }
     
 }

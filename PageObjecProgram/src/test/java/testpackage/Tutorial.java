@@ -14,8 +14,12 @@ import objectrepository.DynamicContent;
 import objectrepository.DynamicControls;
 import objectrepository.EntryAd;
 import objectrepository.Frames;
+import objectrepository.Geolocationopp;
 import objectrepository.Horizontal_Slider;
 import objectrepository.Infinate_Scoll;
+import objectrepository.KeyPress;
+import objectrepository.LargeAndDeepDOM;
+import objectrepository.RedirectedLink;
 import objectrepository.UploadFile;
 
 import java.time.Duration;
@@ -146,7 +150,89 @@ public class Tutorial {
     	s.PerformAction();
     }
     
+    @Test
+    public void FloatingMenu() {
+    	objectrepository.FloatingMenu m=new objectrepository.FloatingMenu(driver);
+    	m.getMenu();
+    	m.getFloating();
+    	
+    }
+    @Test
+    public void GeoLocation() {
+    	Geolocationopp opp=new Geolocationopp(driver);
+    	opp.getLink();
+    	opp.getlocateButton();
+    	opp.getMap();
+    }
     
+    @Test
+    public void JavascriptAlert() {
+    	objectrepository.JavascriptAlert j=new objectrepository.JavascriptAlert(driver);
+    	j.getLink();
+    	j.getalertButton();
+    	
+    }
+    
+    @Test
+    public void Key_Presses() throws InterruptedException {
+    	KeyPress kp=new KeyPress(driver);
+    	kp.getLink();
+    	kp.operation();
+    }
+    
+  @Test
+  public void Multiple_Windows() {
+	  objectrepository.Multiple_Windows wind=new objectrepository.Multiple_Windows(driver);
+	  wind.getLink();
+	  wind.PerformAction();
+	  
+  }
+  @Test
+  public void NestedFrames() {
+	  objectrepository.NestedFrames s=new objectrepository.NestedFrames(driver);
+	  s.getLink();
+	  s.PerformAction();
+	  
+  }
+  @Test
+  public void NotificationMessages() {
+	  objectrepository.NotificationMessages s=new objectrepository.NotificationMessages(driver);
+	  s.getLink();
+	  s.PerformAction();
+  }
+  
+ @Test
+ public void RediredLink() throws InterruptedException
+ {
+	 RedirectedLink link=new RedirectedLink(driver);
+	 link.getLink();
+	 link.PerformAction();
+ }
+ 
+ @Test
+ public void Shadow_DOM() {
+	 objectrepository.Shadow_DOM m=new objectrepository.Shadow_DOM(driver);
+	 m.getLink();
+	 m.PerformAction();
+ }
+ 
+ @Test
+ public void LargeandDeepDOM() throws InterruptedException {
+	LargeAndDeepDOM dom=new LargeAndDeepDOM(driver);
+	dom.getLink();
+	dom.PerformAction();
+ }
+ 
+ @Test
+ public void SortedDataTable() {
+	 objectrepository.SortedDataTable table=new objectrepository.SortedDataTable(driver);
+	 table.getlink();
+	 table.performAction();
+	 
+ }
+  
+    
+  
     
     
 

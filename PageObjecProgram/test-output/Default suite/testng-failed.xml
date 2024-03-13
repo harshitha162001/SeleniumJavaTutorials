@@ -5,8 +5,8 @@
     <classes>
       <class name="testpackage.Tutorial">
         <methods>
-          <include name="download"/>
           <include name="initialize"/>
+          <include name="SortedDataTable"/>
         </methods>
       </class> <!-- testpackage.Tutorial -->
     </classes>
